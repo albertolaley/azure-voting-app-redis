@@ -23,9 +23,7 @@ pipeline {
          steps {
              sh '''
              chmod 777 docker-compose.yml
-             ls -lhtr
-             docker-compose --version
-             docker-compose up -d -f docker-compose.yml --force-recreate
+             docker-compose up -f docker-compose.yml
                ./scripts/test_container.ps1
              '''
          }
