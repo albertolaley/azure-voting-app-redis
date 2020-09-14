@@ -23,8 +23,6 @@ pipeline {
          steps {
              sh '''
              chmod 777 docker-compose.yml
-             docker-compose -f docker-compose.yml
-               ./scripts/test_container.ps1
              '''
          }
          post {
