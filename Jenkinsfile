@@ -24,6 +24,7 @@ pipeline {
              sh '''
              chmod 777 docker-compose.yml
              ls -lhtr
+             docker-compose --version
              docker-compose up -d
                ./scripts/test_container.ps1
              '''
